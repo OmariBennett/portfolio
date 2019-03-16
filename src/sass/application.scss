@@ -1,0 +1,52 @@
+/*********************************************************************************************************
+**                                                                                                      **
+	SCSS Santity Test  './scss/application.scss
+**                                                                                                      **
+*********************************************************************************************************/
+// ==========================================================================
+// Global Imports
+// ==========================================================================
+ 
+//Font Stacks 
+$stack-sans-serif		: 	Arial, sans-serif;
+$stack-calibri			:	 	Calibri, Candara, Segoe, Segoe UI, Optima, $stack-sans-serif; 
+$stack-candara			: 	Candara, $stack-calibri;
+
+*, *::before, *::after {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+.nav {
+	display: flex;	
+	flex-direction: row;
+	background: #3366cc;
+}
+
+.nav__logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.nav__img {
+	width: 100px;
+}
+
+.nav__btn {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  position: absolute;
+  top: 50px;
+  left: 90%;
+  
+}
+
+.nav__btn::before {
+	content: '';
+	background-color: red;
+}

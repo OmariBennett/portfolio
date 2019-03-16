@@ -1,7 +1,9 @@
 # folders
 node_modules
 
+#Tempporary .gitignore file
+dist
+
 # files
 .babelrc
 webpack.config.js
-dist
