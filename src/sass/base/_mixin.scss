@@ -11,9 +11,9 @@
 	text-align: center;
 }
 
-@mixin btnSize($w, $l) {
+@mixin btnSize($w, $h) {
 	width: $w;
-	height: $l;
+	height: $h;
 }
 
 // Media Query
