@@ -1,0 +1,26 @@
+// ==========================================================================
+// Variables Imports
+// ==========================================================================
+ 
+//Font Stacks 
+$stack-sans-serif		: 	Arial, sans-serif;
+$stack-arial-Blk			: 	Arial Black, Arial Bold, Gadget, sans-serif;
+$stack-calibri			:	 	Calibri, Candara, Segoe, Segoe UI, Optima, $stack-sans-serif; 
+$stack-candara			: 	Candara, $stack-calibri;
+
+// Descriptive color variables
+$white 	: 	#ffffff;
+$red		: 	#ff0000;
+//------------------------------//
+$primary			: 	$red;
+$secondary		: 	$white; 
+$tertiary			:		#333333;
+
+//Media Queries
+$med 		:		768px;
+$lg 		:  	900px;
+
+//Asset paths
+$path-img 		: 	'../img';
+$path-font 		: 	'../fonts';
+

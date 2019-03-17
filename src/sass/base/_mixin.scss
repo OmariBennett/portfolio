@@ -1,0 +1,24 @@
+// ==========================================================================
+// Mixins Imports
+// ==========================================================================
+
+@mixin boxShadow {
+	box-shadow: 10px 0px 12px rgba(0, 0, 0, .3);
+}
+
+@mixin upperCase {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+@mixin btnSize($w, $l) {
+	width: $w;
+	height: $l;
+}
+
+// Media Query
+@mixin mq($size) {
+	@media only screen and (min-width: $size) {
+		@content;
+	}
+}
