@@ -3,6 +3,7 @@ node_modules
 
 #Tempporary .gitignore file
 dist
+img
 
 # files
 .babelrc
