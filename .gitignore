@@ -4,6 +4,7 @@ node_modules
 #Tempporary .gitignore file
 dist
 img
+_temp.scss
 
 # files
 .babelrc
