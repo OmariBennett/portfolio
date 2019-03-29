@@ -2,188 +2,144 @@
 // Cover Imports
 // ==========================================================================
 
-/* ==========================================================================
-	Date: 3/18/19
-	Omari Bennett
-
-   Cover Notes:
-		.cover__btn:hover / ::before {
-			On hover, the button should transform into a circle with two extra circler layers around it. When clicked, the circle should ripple out.
-
-			Problem:
-			  I can't get the button pseudo slector to go behind the btn div element.
-
-			Code:
-				&__btn-container::before {
-					width: 100px;
-					height: 100px;
-					content: '';
-					background-color: navy;
-					display: block;
-					position: absolute;
-					top: -35px;
-					left: -2.5px;
-					z-index: -1px;
-					border-radius: 50%;
-				}
-
-				&__btn::before {
-					content: '';
-					@include btnSize(800px, 28px);
-					width: 100px;
-					height: 100px;
-					padding: 16px 50px;
-				}
-		}
-   ========================================================================*/
-
-// .num {
-// 	@include boxShadow;
-// 	display: grid;
-// 	// grid-template-columns: 1fr  2fr;
-// 	// grid-template-rows: 1fr 1fr 2fr 2fr 1f;
-// 	grid-template-columns: 40px  2fr;
-// 	grid-template-rows: 50% repeat(3, 1fr);
-// 	background-color: green;
-// 	width: 375px;
-// 	height: 667px;
-// 	margin: auto;
-
-// 	&__1 {
-// 		background: red;
-// 	}
-
-// 	&__2 {
-// 		background: yellow;
-// 	}
-	
-// 	&__3 {
-// 		background: navy;
-// 	}
-	
-// 	&__4 {
-// 		background: purple;
-// 	}
-	
-// 	&__5 {
-// 		background: black;
-// 	}
-	
-// 	&__6 {
-// 		background: pink;
-// 	}
-	
-// 	&__7 {
-// 		background: orange;
-// 	}
-// }
-
-$grid_col_1	:	35px;
-
 .cover {
-	@include boxShadow;
 	display: grid;
 	grid-template-columns: 40px  2fr;
-	grid-template-rows: 50% $grid_col_1 30px 1fr;
-	// background-image: url("../img/axel-antas-bergkvist-18903-unsplash.jpg");
-	background-size: cover;
-	// width: 375px;
-	// height: 667px;
-	width: 768px;
-	height: 1024px;
-	margin: auto;
+	grid-template-rows: 40% 1fr;
+	height: 667px;
 
-background: green;
-
-	&__img { display: none; }
-
-	&__title {
+	&__img {
+		@include boxShadow;
 		grid-column: 1 /3;
-		grid-row: 2 /  4;
-	 	height: $grid_col_1;
-	 	font-family: $stack-arial-Blk;
-	 	text-align: center;
-	 	font-size: 1em;
-	 	padding: 10px 5px;
+		grid-row: 1 /  3;
+		background: url("../img/axel-antas-bergkvist-18903-unsplash.jpg") center center no-repeat;
+		background-size: cover;
+		position: relative;
+		bottom: 0;
+		z-index: -1;
 	}
 
-	&__title , &__author  {
-		background-color: $primary;
+	&__title {
+	 	font-family: $stack-arial-Blk;
+	 	text-align: center;
+	 	font-size: 1.8em;
+	 	padding: 0px 20px 5px;
+	 	margin-bottom: 90%;
+	}
+
+	&__title, &__author {
+		background-color: rgba(255, 0, 0, .8); 
 		color: $secondary;
 	 	text-transform: uppercase;
-		display: inline-block;
+		display: block;
+	}
+
+	&__title, &__btn {
+		grid-column: 1 /3;
+		grid-row: 2 /  3;
 	}
 
 	&__author {
 		@include boxShadow;
-		grid-column: 1 / 2;
-		grid-row: 4 /  6;
+		grid-column: 1 /2;
+		grid-row: 2 /  2;
 		font-family: $stack-calibri;
 		font-size: 1.6em;
 		text-align: center;
-		display: inline-block;
-		padding: 10px 5px 10px 10px;
+		padding: 20px 0px;		
+		position: absolute;
+		bottom: 0;
+		z-index: 3;
 		writing-mode: vertical-rl;
 	}
 
 	&__btn {
-		@include btnSize(6rem, 28px);
-	 	@include upperCase;		
 		@include boxShadow;
-		grid-column: 2 / 3;
-		grid-row: 4 /  6;
-	 	font-size: 1.5rem;
-		background: #f2f2f2;
-	 	border: 2px solid $primary;
-		display: block;
-		margin: 0px calc(50% - 96px);
-		padding: 0px 5px;
-		transition: 300ms ease-out;
-		transition-property: color, outline, outline-offset;
- 	}
+		@include upperCase;
+		text-decoration: none;
+		display: inline-block;
+		text-align: center;
+		font-size: 1.5rem;
+		color: $white;
+		background: rgba(255, 0, 0, .6);
+		padding: 20px;
+		margin: auto;
+		transition: 300ms ease-in-out;
+		transition-property: box-shadow, color, outline, outline-offset;
+	}
 
 	&__btn:hover {
-		background-color: $primary;		
-		outline: 2px solid $secondary;
-		outline-offset: -3px;
-
+		box-shadow:	0 0 0 10px rgba(255, 0, 0, .5),
+								0 0 0 20px rgba(255, 26, 26, .5),
+								0 0 0 30px rgba(255, 51, 51, .4),
+								0 0 0 40px rgba(255, 77, 77, .2);
 	}
 
- 	&__link { 
- 		text-decoration: none;
- 		color: $primary;
+	&__btn:hover {
+	  box-shadow: 0 5px -1 rgba(0, 0, 0, .3);
+	  transform: translateY(4px);
  	}
-
-	&__link:hover {
-		color: $secondary;
-	}
 
 	@include mq($med)	{
 		& {
-			grid-template-columns: 40px  2fr;
-			grid-template-rows: 50% repeat(3, 1fr);
+			grid-template-columns: 10% 1fr;
+			grid-template-rows: 80% 1fr;
+			height: 1024px;
+			position: relative;
 		}
 
 		&__img {
 			grid-column: 2 / 3;
-			grid-row: 1 /  5;
-			display: block;
-			width: 700px;
-			height: 1024px;
-			object-fit: cover;
-
+			grid-row: 1 / 3;
+			z-index: 0;
 		}
 
 		&__title {
 			grid-column: 1 / 2;
 			grid-row: 1 / 3;
+			font-size: 1.6rem;
+			text-align: left;
+			text-orientation: upright;
 			color: $primary;
 			background-color: transparent;
+		 	margin-bottom: 0px;
+			letter-spacing: 1.1px;
 			writing-mode: vertical-rl;
+		}
 
-			padding: 0px;
-			width: 100%;
+		&__author {
+			width: 200px;
+			height: 50px;
+			text-align: left;
+			padding: 10px 10px;
+			writing-mode: horizontal-tb;
+		}
+
+		&__btn {
+			@include btnSize(100px, 50px);
+		 	font-size: 1.5rem;
+			text-transform: uppercase;
+			border-radius: 0%;
+			padding: 10px;
+			margin: 0px auto;
+			position: relative;
+			z-index: 2;
+		}
+
+		&__btn:hover {
+			background-color: rgba(255, 0, 0, .5);		
+			outline: 2px solid $secondary;
+			outline-offset: -3px;			
 		}
 	}
 
+	@include mq($lg) {
+		& {
+			width: 1024px;
+			height: 768px;
+			background: url('../img/white_wall.png');
+			padding: 60px;
+			margin: auto;
+		}
+	}
 }
