@@ -1,0 +1,49 @@
+// ==========================================================================
+// Nav Sytling
+// ==========================================================================
+.nav {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	border-bottom: 1px solid black;
+
+	&__body {
+		background: linear-gradient(to right, #fff 40%, transparent 100%);
+		width: 90%;
+		padding: 60px 20px 20px 20px;
+		height: 100vh;
+		position: absolute;
+		z-index: -2;
+	}
+
+	&__list {
+		list-style-type: none;
+		font-size: 1rem;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		width: 75%;
+	}
+
+	&__list--selected {
+		font-size: 1.2rem;
+		border-bottom: 5px solid rgba(255, 0, 0, .5);		
+		margin-bottom: 20px;
+	}
+
+	&__link {
+		font-family: $stack-candara;
+		letter-spacing: 1.2px;
+		color: black;
+		text-decoration: none;
+		padding-right: 100px;
+	}
+
+	&__link--selected {
+		color: red;
+		padding-left: 10px;	
+	}
+
+	&__link:hover {
+		color: red;
+	}
+}

@@ -1,11 +1,12 @@
 # folders
 node_modules
+html
+
+# files
+.babelrc
+webpack.config.js
 
 #Tempporary .gitignore file
 dist
 img
 _temp.scss
-
-# files
-.babelrc
-webpack.config.js
