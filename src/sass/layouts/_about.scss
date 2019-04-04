@@ -1,0 +1,92 @@
+// ==========================================================================
+// About Layouts Styling
+// ==========================================================================
+
+.about {
+	background: $white;
+	padding: 30px;
+	margin: 30px 20px;
+
+	@include mq($med) {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 150px 100px 330px 100px 250px;
+	}
+
+	@include mq($lg) {
+		width: 900px;
+		margin: auto;
+	}
+}
+
+.full_name {
+ font-family: $stack-alfa-slab-one;
+ color: #2574f4;
+ letter-spacing: 2.5px;
+ text-transform: uppercase;
+ position: relative;
+ margin-bottom: 30px;
+
+ &--last {
+ 	position: absolute;
+ 	top: 24px;
+ 	}
+
+ @include mq($med) {
+ 	grid-column: 1 / span 2;
+	margin-bottom: 0;
+	font-size: 2rem;
+
+	&--last {
+		top: 55px;
+	}
+ }
+}
+
+.subject {
+	color: #999999;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+
+
+	&__title {
+		color: #2574f4;
+	}
+
+	&__location {
+	color: #999999;
+	font-size: .8rem;
+	}
+
+	&__experience,
+	&__experience-container {
+ 	grid-row: 3;
+	}
+
+	&__education-container {
+	color: #999999;		
+	}
+
+	&__education,
+	&__education-container {
+	 	grid-row: 4;
+	}
+
+	&__project,
+	&__project-container {
+	 	grid-row: 5;
+	}
+
+	&__skill,
+	&__skill-container {
+	 	grid-row: 6;
+	}
+
+}
+
+@include mq($med) {
+	br {
+		display: inline;
+	}
+}
+// #00a3cc
