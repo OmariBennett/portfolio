@@ -1,0 +1,93 @@
+// ==========================================================================
+// ToDo List Styling
+// ==========================================================================
+.list {
+	margin: 20px 200px;
+
+	&__headline {
+		font-family: $stack-candara;
+		color: #fff;
+		background-color: $forestGreen;
+		padding: 10px 30px;
+		margin-bottom: 30px;
+	}
+
+	&__container {
+		margin-left: 60px;
+		position: relative;
+	}
+
+	&__title {
+		font-family: $stack-alfa-slab-one;
+		font-size: 2rem;
+		border-bottom: 2px solid $lipstick;
+		width: 300px;
+		margin-bottom: 20px;
+		color: $screaminGreen;
+		text-transform: uppercase;
+	}
+
+	&__date {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding-right: .8rem;
+		color: $lipstick;
+	}
+
+	&__item-container {
+		margin-left: 40px;
+		font-size: 1.5rem;
+		color: $forestGreen;
+		text-transform: capitalize;
+	}
+
+	&__item-li {
+		position: relative;
+		margin-bottom: 20px;
+	}
+
+	&__item,
+	&__item-btn-container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item-date {
+		position: absolute;
+		right: 0;
+		margin-right: 180px;
+		font-size: .8rem;
+		color: $forestGreen;
+		text-transform: uppercase;
+	}
+
+	&__item-btn-container {
+		position: absolute;
+		right: 0;
+		padding-right: .8rem;
+	}
+
+	&__item-btn {
+		text-transform: uppercase;
+		color: $white;
+		padding: 8px;
+		border: 0;
+
+		&--up {
+			background-color: $blackberry;
+		}
+
+		&--down {
+			background-color: $lipstick;
+		}	
+		
+		&--remove {
+			background-color: $radicalRed	;
+		}
+	}
+
+	&__item-btn:hover {
+		background-color: $mintGreen	;
+	}
+}	

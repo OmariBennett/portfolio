@@ -3,16 +3,25 @@
 // ==========================================================================
  
 //Font Stacks 
-$stack-sans-serif		: 	Arial, sans-serif;
-$stack-arial-Blk		: 	Arial Black, Arial Bold, Gadget, sans-serif;
-$stack-calibri			:	 	Calibri, Candara, Segoe, Segoe UI, Optima, $stack-sans-serif; 
-$stack-candara			: 	Candara, $stack-calibri;
-$stack-alfa-slab-one			: 	Alfa Slab One, cursive;
+$stack-sans-serif			: 	Arial, sans-serif;
+$stack-arial-Blk			: 	Arial Black, Arial Bold, Gadget, sans-serif;
+$stack-calibri				:	 	Calibri, Candara, Segoe, Segoe UI, Optima, $stack-sans-serif; 
+$stack-candara				: 	Candara, $stack-calibri;
+$stack-alfa-slab-one	: 	Alfa Slab One, cursive;
 
 // Descriptive color variables
 $white 	: 	#ffffff;
 $black	:	#000000;
 $red		: 	#ff0000;
+
+$mintGreen			: #A8FFA8;
+$screaminGreen	: #63E563;
+$forestGreen		: #339933;
+$blackberry			: #4D0A2B;
+$lipstick				: #993266;
+$radicalRed			: #FF3266;
+
+
 //------------------------------//
 $primary			: 	$red;
 $secondary		: 	$white; 
